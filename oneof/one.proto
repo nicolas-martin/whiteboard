@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package protos.types.v1;
+
+import "google/protobuf/struct.proto";
+
+option go_package = "github.cbhq.net/c3/polkadot-go-sdk/gen/go/proto/types";
+
+message ExtrinsicsResponse {
+	Extrinsics extrinsics = 1;
+}
+
+message Extrinsics {
+	Method method = 1;
+	Args args = 2;
+	string hash = 3;
+	repeated Event events = 4;
+	bool success = 5;
+}
+message Event2 {
+	Method method = 1;
+	repeated string data = 2;
+}
+
+message Event {
+	Method method = 1;
+	repeated google.protobuf.Value data = 2;
+}
+
+message DataList {
+    repeated string values = 1;
+}
+
+message ExtrinsicSuccessDataList {
+    repeated string values = 1;
+}
+
+message ExtrinsicSuccessData {
+	message Weight {
+		string ref_time = 1;
+		string proof_size = 2;
+	}
+	Weight weight = 1;
+	string class = 2;
+	string pays_fee = 3;
+}
+
+message Method {
+	string pallet = 1;
+	string method = 2;
+}
+
+message Args {
+	string now = 1;
+}

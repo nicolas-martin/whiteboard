@@ -1,0 +1,44 @@
+{
+    "at": {
+        "height": "15366706",
+        "hash": "0xd38d9028ddfbd544bdd9530794c3818ae951bdbe9c4c8361704a066b047d12ea"
+    },
+    "extrinsics": {
+        "method": {
+            "pallet": "timestamp",
+            "method": "set"
+        },
+        "signature": null,
+        "nonce": null,
+        "args": {
+            "now": "1683157050000"
+        },
+        "tip": null,
+        "hash": "0x11d0d1b7df5eb66cd9eb2bad12ea5f14c9d919480255dab995e078f36648f693",
+        "info": {},
+        "era": {
+            "immortalEra": "0x00"
+        },
+        "events": [
+            {
+                "method": {
+                    "pallet": "system",
+                    "method": "ExtrinsicSuccess"
+                },
+                "data": [
+                    {
+                        "weight": {
+                            "refTime": "229721000",
+                            "proofSize": "0"
+                        },
+                        "class": "Mandatory",
+                        "paysFee": "Yes"
+                    }
+                ]
+            }
+        ],
+        "success": true,
+        "paysFee": false
+    }
+}
+
